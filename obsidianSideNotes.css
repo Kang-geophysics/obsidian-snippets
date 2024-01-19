@@ -1,0 +1,64 @@
+/* 
+This code represents the selected CSS styles.
+Please refer to the comments within the code for specific details about each style.
+*/
+
+/* This is for Cue Card */
+/* reference: https://scripter.co/sidenotes-using-only-css/ */
+@media(min-width: 400px){
+
+    .callout[data-callout="side-left"] {
+        /* --callout-color defiines the background color using numbers (0-255) for red, green, and blue (rgb) */
+        /* --callout-color: 63, 35, 205;  */
+        /* --callout-icon can be an icon ID from lucide.dev, or an SVG element. */
+        --callout-icon: book-open-check;
+        background-color: #f5f5f5;
+        color: black;
+        /* Location */
+        float: left; /* To move the side note*/
+        clear: left; /* This is necessary to prevent adjacent floating elements from overlapping */
+        width: 15vw;
+        position: relative;
+        margin-left: -17vw; /*vw is viewport, which is the browser window size*/
+        margin-top: -1vw;
+        padding-right: 1vw;
+
+        .callout-title{
+            font-style:italic;
+        }
+        .callout-content{
+            font-size: 1.2rem;
+        }
+    }
+
+    .callout[data-callout="side-right"] {
+        /* --callout-color defiines the background color using numbers (0-255) for red, green, and blue (rgb) */
+        /* --callout-color: 63, 35, 205;  */
+        /* --callout-icon can be an icon ID from lucide.dev, or an SVG element. */
+        --callout-icon: book-open-check;
+        background-color: #f5f5f5;
+        color: black;
+        /* Location */
+        float: right; /* To move the side note*/
+        clear: right; /* This is necessary to prevent adjacent floating elements from overlapping */
+        width: 15vw;
+        position: relative;
+        margin-right: -17vw; /*vw is viewport, which is the browser window size*/
+        margin-top: -1vw;
+        padding-right: 1vw;
+
+        .callout-title{
+            font-style:italic;
+        }
+        .callout-content{
+            font-size: 1.2rem;
+        }
+    }
+
+    .is-live-preview .callout[data-callout="side-left"]{
+        width: auto;
+    }
+    .is-live-preview .callout[data-callout="side-right"]{
+        width: auto;
+    }
+}
